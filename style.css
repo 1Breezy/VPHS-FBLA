@@ -1,104 +1,65 @@
+/* style.css - modern responsive FBLA student site */
+:root {
+  --blue: #0b63b6;
+  --dark: #0b2e4a;
+  --bg: #f6f9fc;
+  --card: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  margin: 0;
-  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
   line-height: 1.6;
 }
-
 header {
-  background: linear-gradient(to right, #00274d, #004080);
-  color: white;
+  background: linear-gradient(90deg,var(--blue),#0a4f95);
+  color: #fff;
+  padding: 20px;
   text-align: center;
-  padding: 2rem 1rem;
 }
-
-header img {
-  max-width: 150px;
-  margin-bottom: 1rem;
-}
-
+header h1 { margin-bottom: 4px; font-size: 1.8rem; }
+header p { font-size: 1rem; opacity: 0.9; }
 nav {
-  background: #00274d;
-  text-align: center;
-  padding: 0.7rem;
-}
-
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem 1rem;
-}
-
-h2, h1 {
-  color: #ffffff;
-}
-
-.event-list {
-  list-style: none;
-  padding: 0;
-}
-
-.event-list li {
-  background: #f4f6fa;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-left: 5px solid #004080;
-}
-
-footer {
-  background: #00274d;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Banner Section */
-.banner {
-  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
-  height: 350px;
+  background: #07243a;
+  padding: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
+  gap: 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a.active, nav a:hover { text-decoration: underline; }
+main { max-width: 1000px; margin: 20px auto; padding: 0 16px; }
+section { margin-bottom: 32px; }
+h2 { color: var(--blue); margin-bottom: 12px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid #e0e7ef;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card h3 { margin-bottom: 8px; color: var(--blue); }
+footer {
   text-align: center;
-  position: relative;
+  background: #07243a;
+  color: #fff;
+  padding: 16px;
+  margin-top: 40px;
+}
+@media(max-width: 600px) {
+  nav { flex-direction: column; gap: 8px; }
 }
 
-.banner::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 39, 77, 0.6); /* navy overlay */
-}
-
-.banner-text {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  padding: 1rem;
-}
-
-.banner-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.banner-text p {
-  font-size: 1.2rem;
-}
 
 nav a.active {
   font-weight: bold;
