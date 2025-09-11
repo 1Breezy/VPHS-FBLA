@@ -68,7 +68,8 @@ nav a.active {
 
 /* Logo styling */
 .logo {
-  max-width: 120px;   /* adjust size */
+  width: 120px;   /* fixed width */
+  height: auto;   /* keeps proportions */
   display: block;
-  margin: 0 auto 10px auto; /* center above text */
+  margin: 0 auto 10px auto; /* centers it */
 }
